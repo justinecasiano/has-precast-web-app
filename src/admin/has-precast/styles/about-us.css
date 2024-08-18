@@ -1,0 +1,111 @@
+h1, p{
+  color: var(--clr-secondary);
+  font-family: var(--ff-default);
+}
+
+.about-us-hero-section {
+  background-image: url(/has-precast-main/images/about-us/about-us-hero.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: grid;
+  align-items: center;
+}
+
+.about-us-hero-section h1 {
+  background: linear-gradient(134deg, #EF4D62 20.09%, #ffffff 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.about-us-hero-section p {
+  color: #ffffff;
+  margin-block: 2rem;
+}
+
+.about-us-hero-section button {
+  font-size: var(--fs-subtitle);
+  padding: 0.5rem;
+  border: none;
+  color: var(--clr-primary);
+  background: linear-gradient(90deg, #EF4D62 0%, rgba(248, 7, 89, 0.70) 100%);
+  width: fit-content;
+  transition: 0.15s;
+  cursor: pointer;
+}
+
+.about-us-hero-section button:hover {
+  opacity: 0.8;
+}
+
+#about-us-content-wrapper {
+  height: auto;
+  background-color: var(--clr-primary);
+}
+
+#about-us-content-wrapper>h1 {
+  max-width: 50rem;
+  font: 600 calc(var(--fs-title) - 1rem)/1em var(--ff-default);
+  margin-inline: auto;
+  margin-bottom: 2rem;
+} 
+
+#about-us-content-wrapper span {
+  color: var(--clr-accent);
+}
+
+#about-us-content-wrapper>div {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 50rem;
+  margin-inline: auto;
+}
+
+#about-us-content-wrapper img {
+  aspect-ratio: 400/400;
+  object-fit: cover;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+}
+
+.mission-vision {
+  background-image: url(/has-precast-main/images/about-us/mission-vision-img.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: fit-content;
+}
+
+.mission-vision>h1 {
+  color: #ffffff;
+  max-width: 50rem;
+  margin-inline: auto;
+  margin-bottom: 3rem;
+}
+
+.mission-vision>div {
+  max-width: 50rem;
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 3rem;
+  color: var(--clr-secondary);
+}
+
+.mission-vision>div>div {
+  background-color: #ffffff;
+  padding: 1.5rem 2rem;
+  border-radius: 10px;
+  opacity: 0.7;
+  transition: 0.15s;
+}
+
+.mission-vision>div>div:hover {
+  opacity: 1;
+}
+
+.mission-vision>div>div>h1 {
+  margin-bottom: 1rem;
+}

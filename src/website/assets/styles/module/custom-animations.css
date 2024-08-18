@@ -1,0 +1,88 @@
+@keyframes slideLeft {
+  to {
+    transform: translateX(-101%);
+  }
+}
+
+@keyframes slideRight {
+  to {
+    transform: translateX(101%);
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes preload {
+  to {
+    height: auto;
+    overflow: auto;
+  }
+}
+
+@keyframes load {
+  10% {
+    transform: translateX(1%);
+  }
+
+  45% {
+    transform: translateX(100%);
+  }
+
+  99% {
+    transform: translateX(101%);
+  }
+
+  100% {
+    transform: translateX(200%);
+  }
+}
+
+@keyframes scaleUp {
+
+  0%,
+  50% {
+    transform: scale(1.00);
+  }
+
+  80% {
+    transform: scale(1.15);
+  }
+
+  90% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes shake {
+
+  0%,
+  60% {
+    transform: rotate(0);
+  }
+
+  70% {
+    transform: rotate(20deg);
+  }
+
+  80% {
+    transform: rotate(-15deg);
+  }
+
+  90% {
+    transform: rotate(10deg);
+  }
+
+  95% {
+    transform: rotate(-5deg);
+  }
+}

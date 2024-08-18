@@ -1,0 +1,235 @@
+.hero-section {
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+video {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}
+
+.hero-text {
+  color: #FAFAFA;
+  font: 800 6rem/1em var(--ff-default);
+  text-align: center;
+
+  position: absolute;
+  z-index: 2;
+  left: 25px;
+  right: 25px;
+}
+
+.filter {
+  background: rgba(0, 0, 0, 0.4);
+  width: 100%;
+  height: 100vh;
+
+  position: absolute;
+  top: 0;
+  z-index: 1;
+}
+
+.projects-section {
+  height: auto;
+  padding: 1em 0 0 0;
+}
+
+.projects-section>h1 {
+  color: var(--clr-secondary);
+  font: 800 6rem/1em var(--ff-default);
+  text-align: center;
+}
+
+.projects-section .project-view {
+  margin-top: 1%;
+  height: 80vh;
+  border-top: solid 1px #A9A9A9;
+  display: flex;
+
+  position: relative;
+}
+
+.project {
+  width: 25%;
+  height: 100%;
+  border-right: solid 1px #A9A9A9;
+  background-size: cover;
+  background-repeat: no-repeat;
+  cursor: pointer;
+
+  display: grid;
+  place-items: center;
+
+  position: relative;
+  z-index: 1;
+}
+
+.project h1 {
+  color: var(--clr-primary);
+  font-size: 2rem;
+  opacity: 0;
+}
+
+.project .button .up {
+  color: #FAFAFA;
+  border-color: #FAFAFA;
+}
+
+.button-wrapper {
+  position: absolute;
+  top: 100%;
+  z-index: 0;
+}
+
+.project .button {
+  transition: transform 0.5s ease;
+}
+
+.project:hover .button {
+  transform: translateY(-150%);
+}
+
+.project:hover h1{
+  opacity: 1;
+}
+
+.background {
+  width: 100%;
+  height: 100%;
+
+  position: absolute;
+  top: 0;
+  z-index: 0;
+}
+
+.contact-section {
+  padding: 0;
+  height: 80vh;
+  
+  background-size: cover;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+  z-index: 1;
+}
+
+.contact-section::after {
+  content: '';
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+
+  position: absolute;
+  top: 0;
+}
+
+.contact-section h1 {
+  color: #FAFAFA;
+  font: 800 4rem/1em var(--ff-default);
+
+  position: relative;
+  z-index: 1;
+}
+
+.contact-section .button {
+  margin-top: 2em;
+  position: relative;
+  z-index: 1;
+}
+
+.contact-section .button .up {
+  color: #FAFAFA;
+  border-color: #FAFAFA;
+}
+
+.contact-section .button div {
+  font: 800 2rem/1em var(--ff-default);
+}
+
+.wall-form-blocks-section {
+  padding: 0;
+  
+  
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.wall-form-blocks-section h1 {
+  color: #FAFAFA;
+  font: 800 4rem/1em var(--ff-default);
+  margin-bottom: 1%;
+}
+
+
+.wall-form-blocks-section .button {
+  margin-top: 2em;
+}
+
+.wall-form-blocks-section .button .up {
+  color: #FAFAFA;
+  border-color: #FAFAFA;
+}
+
+.wall-form-blocks-section .button div {
+  font: 800 2rem/1em var(--ff-default);
+}
+
+.submitbutton, .submitbutton-cancel{
+  position: fixed;
+  bottom: 200px;
+  z-index: 1000;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.submitbutton{
+  left: 25%;
+}
+
+.submitbutton-cancel{
+  right: 25%;
+}
+
+.submit{
+  color: var(--clr-primary);
+  background: linear-gradient(90deg, #EF4D62 0%, rgba(248, 7, 89, 0.70) 100%);
+}
+
+.submitbutton button, .submitbutton-cancel button{
+  font-family: var(--ff-default);
+  font-weight: 700;
+  font-size: 50px;
+  padding: 0.5rem 1.5rem ;
+  border: 2px solid var(--clr-accent);
+  color: var(--clr-primary);
+  background-color: var(--clr-primary);
+  width: fit-content;
+  transition: 0.15s;
+  cursor: pointer;
+
+  border-radius: 10px;
+}
+
+.submitbutton-cancel .cancel{
+  color: var(--clr-accent);
+}
+
+.submitbutton .submit:hover{
+  opacity: 0.5;
+}
+
+.submitbutton-cancel .cancel:hover{
+  background-color: var(--clr-accent);
+  color: var(--clr-primary);
+}

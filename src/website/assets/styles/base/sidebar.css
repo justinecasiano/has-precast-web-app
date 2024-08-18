@@ -1,0 +1,630 @@
+.toggle-sidebar {
+  display: none;
+}
+
+#toggle-sidebar {
+  display: none;
+}
+
+#toggle-sidebar:checked~.sidebar {
+  transform: translateX(0);
+}
+
+.sidebar {
+  width: 32%;
+  height: 88vh;
+  background: var(--clr-primary);
+  border-radius: 25px 0 0 25px;
+  box-shadow: -5px 0px 10px 0px rgba(0, 0, 0, 0.25);
+
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 4;
+
+  transition: transform 0.5s ease;
+  transform: translateX(100%);
+}
+
+.sidebar .vertical-bar {
+  width: 20px;
+  height: 44vh;
+  background: var(--clr-accent);
+  border-radius: 25px 0 0 25px;
+  box-shadow: -5px 0px 10px 0px rgba(0, 0, 0, 0.25);
+
+  position: absolute;
+  top: 23%;
+  left: -20px;
+
+  cursor: pointer;
+}
+
+.sidebar .icon {
+  width: 40px;
+  height: 40px;
+  background: var(--clr-accent);
+  border-radius: 50%;
+  box-shadow: -5px 0px 10px 0px rgba(0, 0, 0, 0.25);
+
+  position: absolute;
+  top: 44%;
+  left: -45px;
+
+  display: grid;
+  place-items: center;
+
+  cursor: pointer;
+
+  animation: scaleUp 3s ease-in-out infinite;
+}
+
+.sidebar .icon svg {
+  width: 70%;
+  height: 70%;
+  fill: var(--clr-primary);
+
+  animation: shake 3s ease-in-out infinite;
+}
+
+.sidebar .contents,
+.sidebar-container {
+  height: 100%;
+  position: relative;
+  padding: 10px;
+}
+
+.sidebar .account-wall {
+  height: 80%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10%;
+}
+
+.account-wall h2 {
+  font: bold calc(var(--fs-subtitle) + 0.6em) var(--ff-default);
+  text-align: center;
+}
+
+.account-wall a {
+  width: 50%;
+  margin: 0 auto;
+
+  display: block;
+}
+
+.account-wall button {
+  width: 100%;
+  padding: 0.4em 1em;
+
+  font: bold calc(var(--fs-subtitle) + 0.2em) var(--ff-default);
+  transition: background 0.5s ease;
+}
+
+.contents .buttons {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.sidebar .tab {
+  padding: 5px;
+  margin-right: 3px;
+  border: none;
+  border-radius: 15px;
+  font: bold calc(var(--fs-subtitle) + 0.4rem) var(--ff-default);
+  cursor: pointer;
+}
+
+.sidebar .heading {
+  display: flex;
+}
+
+.sidebar .logout {
+  transition: background 0.5s ease;
+}
+
+.cart-actions {
+  width: 50%;
+  padding-inline: 10px;
+  margin-top: 10px;
+
+  display: flex;
+  gap: 5px;
+}
+
+.cart-actions button {
+  width: 30%;
+  border: 2px solid var(--clr-secondary-shade);
+  border-radius: 20px;
+  cursor: pointer;
+
+  position: relative;
+
+  transition: background 0.5s ease;
+}
+
+.cart-actions svg {
+  width: 30px;
+  height: 30px;
+  color: var(--clr-secondary);
+
+  transition: color 0.3s ease;
+}
+
+.cart-actions button:hover::after {
+  content: var(--content);
+
+  padding: 5px 10px;
+  background-color: gray;
+  border-radius: 10px;
+
+  color: var(--clr-primary);
+  font: 500 calc(var(--fs-subtitle) - 3px) var(--ff-default);
+
+  position: absolute;
+  inset: auto 0 -40px 0;
+  z-index: 1000;
+
+  text-wrap: nowrap;
+  width: fit-content;
+}
+
+.cart-actions button:hover svg {
+  color: var(--clr-primary);
+}
+
+.contract-button:hover,
+.message-button:hover,
+.account-wall button:hover,
+.sidebar .logout:hover,
+.cart-actions button:hover,
+.select-buttons button:hover,
+.active-tab {
+  color: var(--clr-primary);
+  background: var(--clr-accent);
+}
+
+.sidebar .cart,
+.sidebar .orders {
+  height: 100%;
+  display: none;
+}
+
+.sidebar .cart-contents,
+.sidebar .order-contents {
+  height: 75%;
+  margin-top: 20px;
+  overflow-y: auto;
+}
+
+.sidebar .orders {
+  color: var(--clr-secondary-shade);
+  font: calc(var(--fs-subtitle) + 5px) var(--ff-default);
+}
+
+.select-product-container {
+  padding: 10px;
+  margin-top: 20px;
+  background: var(--clr-primary);
+  border: 3px solid var(--clr-secondary);
+  border-radius: 20px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.select-product-container label,
+.select-product-container select,
+.select-product-container input {
+  font: var(--fs-subtitle) var(--ff-default);
+}
+
+.selected-image,
+.overlay div {
+  height: 30vh;
+}
+
+.selected-data {
+  display: flex;
+}
+
+.selected-image img,
+.overlay img {
+  object-fit: cover;
+}
+
+.selected-data .size,
+.selected-data .quantity {
+  margin-left: 5px;
+}
+
+.selected-data .size {
+  margin-right: 40px;
+}
+
+.selected-data .quantity {
+  width: 30%;
+}
+
+.select-buttons {
+  margin-top: 5px;
+  margin-left: auto;
+
+  display: flex;
+  gap: 10px;
+}
+
+.select-buttons button {
+  padding: 3px 10px;
+  font: var(--fs-subtitle) var(--ff-default);
+  transition: background 0.5s ease;
+}
+
+.product {
+  margin: 10px;
+  padding: 10px 20px;
+  border: 1px solid black;
+
+  display: flex;
+  align-items: center;
+
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+
+  transition: background 0.5s ease;
+}
+
+.product:hover {
+  color: var(--clr-black);
+  background: var(--clr-primary-shade);
+}
+
+.product input[type=checkbox] {
+  accent-color: var(--clr-accent);
+  transform: scale(1.2);
+}
+
+.product-data {
+  width: 100%;
+  margin-left: 20px;
+}
+
+.product-details {
+  display: flex;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+.product h3 {
+  font: 600 var(--fs-subtitle) var(--ff-default);
+}
+
+.product .design {
+  font-size: calc(var(--fs-subtitle) + 0.2rem);
+}
+
+.overlay {
+  width: 100%;
+  padding: 20px;
+  background: var(--clr-primary);
+  box-shadow: -5px 0px 10px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  position: absolute;
+  top: 10%;
+  left: -120%;
+
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.product:hover~.overlay {
+  opacity: 1;
+}
+
+.overlay p {
+  font: calc(var(--fs-subtitle) - 0.2rem) var(--ff-default);
+}
+
+.order {
+  margin: 10px;
+  padding: 10px 10px;
+  border: 1px solid black;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+
+  user-select: none;
+  position: relative;
+
+  transition: background 0.5s ease;
+}
+
+.order:hover {
+  background: var(--clr-primary-shade);
+}
+
+.order h2 {
+  font: bold calc(var(--fs-subtitle) + 0.3rem) var(--ff-default);
+}
+
+.order h3 {
+  margin-top: 5px;
+  font: calc(var(--fs-subtitle) - 0.1rem) var(--ff-default);
+
+  display: inline-block;
+}
+
+.order-info {
+  margin-top: 5px;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.order-info h4 {
+  margin-top: 5px;
+  font: bold calc(var(--fs-subtitle) - 0.25rem) var(--ff-default);
+}
+
+.orders-heading h3 {
+  font: calc(var(--fs-subtitle) + 0.15rem) var(--ff-default);
+}
+
+.order-data details details {
+  margin: 5px;
+}
+
+.order-item summary~* {
+  padding-left: 40px;
+}
+
+summary:not(.orders-heading) {
+  padding-left: 20px;
+}
+
+.contract-button,
+.message-button {
+  width: 120px;
+  margin-top: 5px;
+  padding: 0.2rem 0.4rem;
+  background: var(--clr-accent);
+
+  color: var(--clr-primary);
+  font: bold calc(var(--fs-subtitle) + 0.1rem) var(--ff-default);
+  cursor: pointer;
+
+  transition: background 0.5s ease;
+}
+
+.contract-button:hover,
+.message-button:hover {
+  background: var(--clr-accent-shade);
+}
+
+.contract-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contract-container div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.contract-container h4 {
+  font: bold calc(var(--fs-subtitle) - 0.25rem) var(--ff-default);
+}
+
+.contract-form {
+  width: 92%;
+  padding: 1rem;
+  background: var(--clr-primary);
+  border: 2px solid black;
+  border-radius: 10px;
+
+  display: none;
+
+  position: absolute;
+  left: 50%;
+  top: 35%;
+  transform: translate(-50%, -35%);
+  z-index: 10;
+}
+
+.contract-form h1 {
+  font: bold calc(var(--fs-subtitle) + 1rem) var(--ff-default);
+  margin-bottom: 5px;
+}
+
+.contract-form form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.contract-form * {
+  font: 500 calc(var(--fs-subtitle) - 1px) var(--ff-default);
+}
+
+.contract-form h4 {
+  font-weight: bold;
+}
+
+.contract-form button {
+  padding: 0.3em;
+  background: var(--clr-accent);
+  border-radius: 10px;
+
+  color: var(--clr-primary);
+  font: bold calc(var(--fs-subtitle) - 0.1rem) var(--ff-default);
+
+  cursor: pointer;
+  transition: background 0.5s ease;
+}
+
+.contract-form button:hover {
+  background: var(--clr-accent-shade);
+}
+
+.chat-main-container {
+  height: 100%;
+  padding: 10px;
+}
+
+.sidebar .chat {
+  width: 100%;
+  height: 100%;
+
+  background: var(--clr-primary);
+  border-radius: 25px 0 0 25px;
+  box-shadow: -5px 0px 10px 0px rgba(0, 0, 0, 0.25);
+
+  position: absolute;
+  top: 0;
+  z-index: 10;
+
+  transition: transform 0.5s ease;
+}
+
+.chat-actions {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.chat-actions h2 {
+  font: bold calc(var(--fs-subtitle) + 0.7rem) var(--ff-default);
+}
+
+.sidebar .send-button,
+.sidebar .close-chat {
+  padding: 0.3em;
+  background: var(--clr-accent);
+  border-radius: 10px;
+
+  color: var(--clr-primary);
+  font: bold var(--fs-subtitle) var(--ff-default);
+
+  cursor: pointer;
+  transition: background 0.5s ease;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.close-chat svg {
+  width: 25px;
+  height: 25px;
+}
+
+.sidebar .chat button:hover {
+  background: var(--clr-accent-shade);
+}
+
+.toggle-chat {
+  transform: translateX(110%);
+}
+
+.chat-container {
+  height: 85%;
+  padding: 10px;
+}
+
+.chat-box {
+  height: 90%;
+  margin-bottom: 10px;
+  padding: 10px;
+
+  background: whitesmoke;
+  border: 1px solid black;
+
+  overflow-y: scroll;
+}
+
+.chat-form {
+  display: flex;
+  justify-content: start;
+  gap: 5px;
+}
+
+.chat .message {
+  width: 85%;
+  padding: 10px;
+  font: 400 calc(var(--fs-subtitle) - 0.2rem) var(--ff-default);
+}
+
+.send-button svg {
+  width: 25px;
+  height: 25px;
+}
+
+.chat-message {
+  max-width: 80%;
+  margin-block: 8px 2px;
+  padding: 10px;
+
+  background: var(--clr-accent);
+  border-radius: 10px;
+
+  color: var(--clr-primary);
+  font: 500 calc(var(--fs-subtitle) - 0.2rem) var(--ff-default);
+  text-align: left;
+
+  overflow-wrap: break-word;
+  overflow-x: hidden;
+}
+
+.quote-offer button {
+  padding: 0.2em;
+  margin-top: 10px;
+  background: var(--clr-primary);
+  border-radius: 10px;
+
+  color: var(--clr-secondary);
+  font: bold calc(var(--fs-subtitle) - 0.2rem) var(--ff-default);
+
+  cursor: pointer;
+  transition: background 0.5s ease;
+}
+
+.quote-offer.quote-offer button:hover {
+  background: var(--clr-accent);
+  color: var(--clr-primary);
+}
+
+.status,
+.name {
+  color: gray;
+  opacity: 0.9;
+  font: 500 calc(var(--fs-subtitle) - 0.3rem) var(--ff-default);
+}
+
+.anchor-right {
+  width: fit-content;
+  margin-left: auto;
+}
+
+.anchor-left {
+  width: fit-content;
+  margin-right: auto;
+}

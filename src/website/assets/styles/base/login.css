@@ -1,0 +1,163 @@
+.index-login {
+    padding: 2em;
+    background: none;
+
+    position: relative;
+
+    display: grid;
+    place-items: center;
+}
+
+.wrapper {
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: 80vh;
+
+    box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+}
+
+.sign-up-link {
+    background-image: url(/website/assets/images/login-and-signup/form-background.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    border-radius: 20px 0 0 20px;
+
+    position: relative;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.sign-up-link img {
+    object-fit: contain;
+    height: 60px;
+    width: 200px;
+
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.sign-up-link div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.sign-up-link h1,
+.sign-up-link p,
+.sign-up-link button {
+    font-family: var(--ff-default);
+    color: var(--clr-primary);
+    text-align: center;
+}
+
+.sign-up-link h1 {
+    font-size: clamp(1rem, -0.786rem + 4.762vw, 3.5rem);
+    font-weight: 700;
+    margin-top: 30px;
+    margin-bottom: 25px;
+}
+
+.sign-up-link p {
+    font-weight: 400;
+    width: 75%;
+    font-size: clamp(0.5rem, -0.214rem + 1.905vw, 1.5rem);
+
+    margin-bottom: 40px;
+}
+
+.sign-up-link button {
+    padding: 15px 70px;
+    border: solid 1px var(--clr-primary);
+    border-radius: 10000px;
+    color: var(--clr-primary);
+    background-color: transparent;
+    font-size: clamp(0.5rem, -0.214rem + 1.905vw, 1.5rem);
+
+    transition: 0.2s;
+}
+
+.sign-up-link a:hover button {
+    color: var(--clr-accent);
+    background-color: var(--clr-primary);
+
+    cursor: pointer;
+}
+
+.login-form {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-form h3,
+.login-form p,
+.login-form label,
+.login-form a {
+    font-family: var(--ff-default);
+    font-style: normal;
+    color: var(--clr-secondary);
+}
+
+.login-form h3 {
+    font-size: clamp(1rem, -0.071rem + 2.857vw, 1.8rem);
+    margin-bottom: 10px;
+}
+
+.login-form p,
+.login-form label {
+    font-size: clamp(0.9rem, -0.071rem + 1.524vw, 0.9rem);
+}
+
+.login-form p {
+    width: 90%;
+    margin-bottom: 30px;
+}
+
+.login-form input {
+    margin-bottom: 10px;
+    margin-top: 5px;
+    padding: 8px;
+    width: 100%;
+    font-family: var(--ff-default);
+}
+
+.login-form>form>a {
+    text-decoration: none;
+    font-size: clamp(0.8rem, -0.071rem + 1.524vw, 0.8rem);
+}
+
+.login-form div {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+.sign_in {
+    padding: 15px 70px;
+    font-family: var(--ff-default);
+    font-style: normal;
+    border: solid 1px var(--clr-accent);
+    border-radius: 10000px;
+    background-color: transparent;
+    font-size: clamp(1rem, -0.214rem + 1.905vw, 1.5rem);
+
+    margin-top: 30px;
+    transition: 0.2s;
+
+    color: var(--clr-accent);
+}
+
+.login-form .sign_in:hover {
+    color: var(--clr-primary);
+    background-color: var(--clr-accent);
+
+    cursor: pointer;
+}

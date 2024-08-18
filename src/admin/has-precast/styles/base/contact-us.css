@@ -1,0 +1,99 @@
+.contact-us-section-1 {
+  padding: 0;
+  
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.contact-us-section-1 h1 {
+  color: #FAFAFA;
+  font: 800 7rem/1em var(--ff-default);
+
+  position: absolute;
+  top: 45%;
+  left: 2%;
+  z-index: 1;
+}
+
+.contact-us-section-2 {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-us-section-2 .map {
+  width: 50%;
+  height: 100%;
+}
+
+.map iframe{
+  width: 100%;
+  height: 100%;
+}
+
+.contact-us-section-2 .contacts {
+  width: 50%;
+}
+
+.contact-us-section-2 .contacts h2 {
+  color: var(--clr-secondary);
+  font: 800 2.2rem/1em var(--ff-default);
+  margin-bottom: 0.5em;
+}
+
+.button, .button-cancel{
+  position: fixed;
+  bottom: 200px;
+  z-index: 1000;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button{
+  left: 25%;
+}
+
+.button-cancel{
+  right: 25%;
+}
+
+.submit{
+  color: var(--clr-primary);
+  background: linear-gradient(90deg, #EF4D62 0%, rgba(248, 7, 89, 0.70) 100%);
+}
+
+.button button, .button-cancel button{
+  font-family: var(--ff-default);
+  font-weight: 700;
+  font-size: 50px;
+  padding: 0.5rem 1.5rem ;
+  border: 2px solid var(--clr-accent);
+  color: var(--clr-primary);
+  background-color: var(--clr-primary);
+  width: fit-content;
+  transition: 0.15s;
+  cursor: pointer;
+
+  border-radius: 10px;
+}
+
+.button-cancel .cancel{
+  color: var(--clr-accent);
+}
+
+.button .submit:hover{
+  opacity: 0.5;
+}
+
+.button-cancel .cancel:hover{
+  background-color: var(--clr-accent);
+  color: var(--clr-primary);
+}
+
+button > a{
+  width: fit-content;
+}

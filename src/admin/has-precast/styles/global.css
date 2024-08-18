@@ -1,0 +1,383 @@
+:root {
+  --clr-primary: #FAFAFA;
+  --clr-primary-shade: #DDDEDE;
+  --clr-secondary: #0C0C0C;
+  --clr-secondary-shade: #434343;
+  --clr-accent: #EF4D62;
+  --clr-accent-shade: #F80759;
+  --clr-scheme: var(--clr-primary);
+
+  --fs-default: 16px;
+  --fs-heading: 8rem;
+  --fs-title: 3rem;
+  --fs-subtitle: 1.2rem;
+
+  --ff-default: 'Inter Tight', sans-serif;
+}
+
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font: var(--fs-default) var(--ff-default);
+}
+
+
+svg,
+img {
+  width: 100%;
+  height: 100%;
+}
+
+header {
+  width: 100%;
+  height: 15vh;
+  padding-inline: 3em;
+  background: var(--clr-primary);
+  box-shadow: 0px 5px 10px -4px var(--clr-secondary);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  position: fixed;
+  z-index: 3;
+}
+
+header .logo-container {
+  width: 20%;
+  height: 100%;
+}
+
+header .logo-container a {
+  width: fit-content;
+  height: 80%;
+  margin: 0.5em auto auto 2em;
+
+  display: block;
+}
+
+header nav {
+  width: 65%;
+}
+
+header .navbar-links {
+  list-style: none;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .navbar-links li {
+  height: fit-content;
+
+  position: relative;
+}
+
+header .navbar-links li a {
+  color: var(--clr-secondary-shade);
+  font: 600 var(--fs-subtitle) var(--ff-default);
+  text-decoration: none;
+}
+
+header .navbar-links li a:hover {
+  color: var(--clr-secondary);
+  font-weight: bold;
+
+  transition: color 0.5s ease, font-weight 0.5s ease;
+}
+
+header .navbar-links li a:hover+.highlight-wrapper .highlight {
+  animation: load 20s ease;
+}
+
+.preloader-wrapper {
+  width: 100%;
+  height: 100vh;
+
+  position: absolute;
+  z-index: 4;
+
+  animation: slideLeft 0.1s ease 3.8s forwards;
+}
+
+.preloader {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+}
+
+.preloader .logo {
+  width: 21%;
+  padding-inline: 1%;
+  overflow: hidden;
+
+  position: relative;
+
+  animation: fadeOut 1s ease 2.2s forwards;
+}
+
+.preloader-elem-2 {
+  stroke: var(--clr-primary);
+}
+
+.logo-elem-2 {
+  stroke: var(--clr-secondary);
+  fill: var(--clr-secondary);
+}
+
+section {
+  height: 100vh;
+  padding-inline: 5em;
+  padding-block: 8em;
+  background: linear-gradient(var(--clr-primary), var(--clr-primary-shade));
+
+  position: relative;
+}
+
+footer {
+  height: 30vh;
+  padding: 2em 3em;
+  color: #FAFAFA;
+  background: #0C0C0C;
+
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+  position: relative;
+  z-index: 1;
+}
+
+footer .col-1 {
+  width: 30%;
+}
+
+footer .col-1 .logo-container a {
+  width: 25%;
+
+  display: inline-block;
+}
+
+footer .col-1 .logo-container .footer-logo-elem-2 {
+  fill: #FAFAFA;
+  stroke: #FAFAFA;
+}
+
+footer .col-1 p {
+  width: 100%;
+  margin-top: 10px;
+
+  color: #A9A9A9;
+  font: 600 var(--fs-subtitle) var(--ff-default);
+}
+
+footer .col-2 {
+  width: 35%;
+}
+
+footer .col-2 h2 {
+  margin-bottom: 10px;
+  font: bold 2rem var(--ff-default);
+}
+
+footer .col-2>div {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5%;
+}
+
+footer .col-2 div .links {
+  width: 50%;
+}
+
+footer .col-2 div .links a {
+  display: block;
+  text-decoration: none;
+  color: #FAFAFA;
+  font: 500 var(--fs-subtitle) var(--ff-default);
+}
+
+footer .col-3 {
+  width: 15%;
+}
+
+footer .col-3 h2 {
+  margin: auto auto 0.5em 0.45em;
+  font: bold 2rem var(--ff-default);
+}
+
+footer .col-3 .socials {
+  width: 100%;
+
+  display: flex;
+  justify-content: space-evenly;
+}
+
+footer .col-3 .socials svg {
+  width: 50px;
+  height: 50px;
+}
+
+footer .col-3 .socials svg path {
+  fill: #FAFAFA;
+  display: flex;
+}
+
+.toggle-sidebar {
+  display: none;
+}
+
+#toggle-sidebar {
+  display: none;
+}
+
+#toggle-sidebar:checked~.sidebar {
+  transform: translateX(0);
+}
+
+.sidebar {
+  width: 28%;
+  height: 88vh;
+  background: var(--clr-primary);
+  border-radius: 25px 0 0 25px;
+  box-shadow: -5px 0px 10px 0px rgba(0, 0, 0, 0.25);
+
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 4;
+
+  transition: transform 0.5s ease;
+  transform: translateX(100%);
+}
+
+.sidebar .vertical-bar {
+  width: 20px;
+  height: 44vh;
+  background: var(--clr-accent);
+  border-radius: 25px 0 0 25px;
+  box-shadow: -5px 0px 10px 0px rgba(0, 0, 0, 0.25);
+
+  position: absolute;
+  top: 23%;
+  left: -20px;
+
+  cursor: pointer;
+}
+
+.sidebar .icon {
+  width: 40px;
+  height: 40px;
+  background: var(--clr-accent);
+  border-radius: 50%;
+  box-shadow: -5px 0px 10px 0px rgba(0, 0, 0, 0.25);
+
+  position: absolute;
+  top: 44%;
+  left: -45px;
+
+  display: grid;
+  place-items: center;
+
+  cursor: pointer;
+
+  animation: scaleUp 3s ease-in-out infinite;
+}
+
+.sidebar .icon svg {
+  width: 70%;
+  height: 70%;
+  fill: var(--clr-primary);
+
+  animation: shake 3s ease-in-out infinite;
+}
+
+.sidebar .contents {
+  position: relative;
+  padding: 20px 20px;
+}
+
+.sidebar .tab {
+  padding: 5px;
+  margin-right: 3px;
+  border: none;
+  border-radius: 15px;
+  font: bold calc(var(--fs-subtitle) + 0.4rem) var(--ff-default);
+  cursor: pointer;
+}
+
+.sidebar .add-product:hover,
+.active-tab {
+  color: var(--clr-primary);
+  background: var(--clr-accent);
+  border: none;
+}
+
+.sidebar .add-product {
+  width: 100%;
+  padding: 15px;
+  border: 2px dashed var(--clr-secondary-shade);
+  font: 500 calc(var(--fs-subtitle) + 0.2rem) var(--ff-default);
+  cursor: pointer;
+
+  transition: background 0.5s ease;
+}
+
+.sidebar .cart,
+.sidebar .orders {
+  margin-top: 10px;
+  display: none;
+}
+
+.sidebar .orders {
+  color: var(--clr-secondary-shade);
+  font: var(--fs-title) var(--ff-default);
+}
+
+
+
+
+
+
+.notification {
+  width: 400px;
+  padding: 20px;
+  margin-inline: auto;
+  border-radius: 10px;
+  border: 2px solid;
+
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  overflow-wrap: break-word;
+  
+  position: fixed;
+  z-index: 10;
+
+  animation: fadeOut ease-out 8s forwards;
+}
+
+@keyframes fadeOut {
+  0%,
+  90% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}

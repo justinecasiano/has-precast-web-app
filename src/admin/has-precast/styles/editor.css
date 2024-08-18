@@ -1,0 +1,49 @@
+
+
+.table {
+  min-height: fit-content;
+
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding: 30px 30px;
+
+  border-radius: 10px;
+
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+
+}
+
+thead{
+  text-align: left;
+  background-color: var(--clr-accent);
+  color: var(--clr-primary);
+  
+}
+
+thead, tbody {
+  height: 40px;
+}
+
+th, td {
+  padding-left: 10px;
+}
+
+th:first-of-type{
+  border-radius: 10px 0 0 0;
+}
+
+th:last-of-type {
+  border-radius: 0 10px 0 0;
+}
+
+#editclient {
+  margin-top: 100px;
+}
+

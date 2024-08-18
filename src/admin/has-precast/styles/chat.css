@@ -1,0 +1,396 @@
+.main-container {
+  width: 76%;
+  padding-top: 90px;
+  margin-left: calc(20% + 50px);
+  padding-bottom: 10px;
+  overflow: hidden;
+}
+
+.chat-wrapper {
+  width: 95%;
+  height: 85vh;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  display: flex;
+
+  overflow: hidden;
+}
+
+.order-tab {
+  width: 40%;
+  height: 100%;
+  border: 3px solid black;
+  border-radius: 10px;
+
+  position: relative;
+}
+
+.order-heading {
+  padding: 10px 0 0 10px;
+  font: bold calc(var(--fs-title) - 0.2rem) var(--ff-default);
+}
+
+.order-contents {
+  height: 85%;
+  overflow-y: auto;
+}
+
+.order {
+  margin-block: 10px;
+  padding: 10px 10px;
+  padding-right: 20px;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+
+  user-select: none;
+
+  transition: background 0.5s ease;
+}
+
+.order:hover {
+  background: var(--clr-primary-shade);
+}
+
+.order>div:first-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.order h2 {
+  font: bold calc(var(--fs-subtitle) + 0.3rem) var(--ff-default);
+
+  position: relative;
+}
+
+.order h3 {
+  margin-top: 5px;
+  font: calc(var(--fs-subtitle) - 0.1rem) var(--ff-default);
+
+  display: inline-block;
+}
+
+.order-info {
+  margin-top: 5px;
+  width: 100%;
+}
+
+.order-info>div {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.order-info h4 {
+  margin-top: 5px;
+  font: bold calc(var(--fs-subtitle) - 0.25rem) var(--ff-default);
+}
+
+.orders-heading h3 {
+  font: calc(var(--fs-subtitle) + 0.15rem) var(--ff-default);
+}
+
+.order-data details details {
+  margin: 5px;
+}
+
+.order-item summary~* {
+  padding-left: 40px;
+}
+
+.order-contents summary:not(.orders-heading) {
+  padding-left: 20px;
+}
+
+.contract-button,
+.message-button {
+  width: 120px;
+  padding: 0.2rem 0.4rem;
+  background: var(--clr-accent);
+
+  color: var(--clr-primary);
+  font: bold calc(var(--fs-subtitle) + 0.1rem) var(--ff-default);
+  cursor: pointer;
+
+  position: relative;
+
+  transition: background 0.5s ease;
+}
+
+.contract-button:hover,
+.message-button:hover {
+  background: var(--clr-accent-shade);
+}
+
+.contract-container {
+  width: 100%;
+  margin-top: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contract-container div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.contract-container h4 {
+  font: bold calc(var(--fs-subtitle) - 0.25rem) var(--ff-default);
+}
+
+.contract-form {
+  width: 90%;
+  padding: 1rem;
+  background: var(--clr-primary);
+  border: 2px solid black;
+  border-radius: 10px;
+
+  display: none;
+
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+
+.contract-form h1 {
+  font: bold calc(var(--fs-subtitle) + 1rem) var(--ff-default);
+  margin-bottom: 5px;
+}
+
+.contract-form form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.contract-form * {
+  font: 500 calc(var(--fs-subtitle) - 1px) var(--ff-default);
+}
+
+.contract-form h4 {
+  font-weight: bold;
+}
+
+.contract-form button {
+  padding: 0.3em;
+  background: var(--clr-accent);
+  border-radius: 10px;
+
+  color: var(--clr-primary);
+  font: bold calc(var(--fs-subtitle) - 0.1rem) var(--ff-default);
+
+  cursor: pointer;
+  transition: background 0.5s ease;
+}
+
+.contract-form button:hover {
+  background: var(--clr-accent-shade);
+}
+
+.chat-contents {
+  width: 60%;
+  height: 85vh;
+  padding: 10px;
+  position: relative;
+}
+
+.chat-contents .chat {
+  width: 100%;
+  height: 100%;
+
+  background: var(--clr-primary);
+  border-radius: 25px 0 0 25px;
+  box-shadow: -5px 0px 10px 0px rgba(0, 0, 0, 0.25);
+
+  position: absolute;
+  top: 0;
+  z-index: 10;
+
+  transition: transform 0.5s ease;
+}
+
+.chat-actions {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.chat-actions h2 {
+  font: bold calc(var(--fs-subtitle) + 0.4rem) var(--ff-default);
+}
+
+.chat-info {
+  width: 80%;
+}
+
+.chat-info>div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.chat-contents .chat .button {
+  padding: 0.3em;
+  background: var(--clr-accent);
+  border-radius: 10px;
+
+  color: var(--clr-primary);
+  font: bold var(--fs-subtitle) var(--ff-default);
+
+  cursor: pointer;
+  transition: background 0.5s ease;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.chat-contents .chat button:hover {
+  background: var(--clr-accent-shade);
+}
+
+.toggle-chat {
+  transform: translateX(110%);
+}
+
+.chat-container {
+  height: 83%;
+  padding: 10px;
+}
+
+.chat-box {
+  height: 90%;
+  margin-bottom: 10px;
+  padding: 10px 10px 10px 10px;
+
+  background: whitesmoke;
+  border: 1px solid black;
+
+  overflow-y: scroll;
+  position: relative;
+}
+
+.chat-form {
+  display: flex;
+  justify-content: start;
+  gap: 5px;
+}
+
+.chat .message {
+  width: 83%;
+  padding: 10px;
+  font: 400 calc(var(--fs-subtitle) - 0.2rem) var(--ff-default);
+}
+
+.close-chat svg,
+.quotation-button svg,
+.send-button svg {
+  width: 25px;
+  height: 25px;
+}
+
+.chat-message {
+  max-width: 80%;
+  margin-block: 8px 2px;
+  padding: 10px;
+
+  background: var(--clr-accent);
+  border-radius: 10px;
+
+  color: var(--clr-primary);
+  font: 500 calc(var(--fs-subtitle) - 0.2rem) var(--ff-default);
+  text-align: left;
+
+  overflow-wrap: break-word;
+  overflow-x: hidden;
+}
+
+.add-quote {
+  width: 50%;
+  padding: 1rem;
+  background: var(--clr-primary);
+  border: 2px solid black;
+  border-radius: 10px;
+  font: bold calc(var(--fs-subtitle)- 10px) var(--ff-default);
+
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.add-quote>div:first-child {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.add-quote button {
+  padding: 0.3em;
+  background: var(--clr-accent);
+  border-radius: 10px;
+
+  color: var(--clr-primary);
+  font: bold calc(var(--fs-subtitle) - 0.1rem) var(--ff-default);
+
+  cursor: pointer;
+  transition: background 0.5s ease;
+}
+
+.add-quote button:hover {
+  background: var(--clr-accent-shade);
+}
+
+.add-quote input {
+  padding-inline: 2px;
+  font: calc(var(--fs-subtitle) - 0.05rem) var(--ff-default);
+}
+
+.add-quote .orders {
+  max-height: 10vh;
+  overflow-y: auto;
+}
+
+.add-quote .orders h3 {
+  font: calc(var(--fs-subtitle) - 0.1rem) var(--ff-default);
+
+  display: inline-block;
+}
+
+.add-quote .order-item summary~* {
+  padding-left: 20px;
+}
+
+.quote-offer button {
+  display: none;
+}
+
+.status,
+.name {
+  color: gray;
+  opacity: 0.9;
+  font: 500 calc(var(--fs-subtitle) - 0.3rem) var(--ff-default);
+}
+
+.anchor-right {
+  width: fit-content;
+  margin-left: auto;
+}
+
+.anchor-left {
+  width: fit-content;
+  margin-right: auto;
+}

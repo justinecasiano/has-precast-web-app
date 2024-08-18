@@ -1,0 +1,83 @@
+.table {
+  min-height: fit-content;
+  width: 100%;
+
+  background-color: white;
+  display: flex;
+  align-items: start;
+  padding: 50px 100px;
+
+  border-radius: 10px;
+
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+.table img {
+  width: calc(100% - 355px);
+  object-fit: cover;
+  height: 200px;
+
+  border-radius: 10px;
+}
+
+#hero_media{
+  width: calc(100% - 250px);
+  
+  height: 200px;
+  aspect-ratio: 10/2;
+}
+
+form {
+  width: 100%;
+}
+
+.table form>div{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+form textarea{
+  min-height: 100px;
+  width: 50%;
+
+}
+
+h2{
+  margin: 50px 0;
+}
+
+.submit{
+  color: var(--clr-primary);
+  background: linear-gradient(90deg, #EF4D62 0%, rgba(248, 7, 89, 0.70) 100%);
+}
+
+.submit, .cancel{
+  font-family: var(--ff-default);
+  font-weight: 700;
+  font-size: 18px;
+  padding: 0.5rem 1.5rem ;
+  border: 2px solid var(--clr-accent);
+  color: var(--clr-primary);
+  background-color: var(--clr-primary);
+  width: fit-content;
+  transition: 0.15s;
+  cursor: pointer;
+
+  border-radius: 10px;
+}
+
+.cancel{
+  color: var(--clr-accent);
+}
+
+.submit:hover{
+  opacity: 0.5;
+}
+
+.cancel:hover{
+  background-color: var(--clr-accent);
+  color: var(--clr-primary);
+}
+

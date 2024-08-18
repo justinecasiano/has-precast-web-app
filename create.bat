@@ -1,0 +1,1 @@
+START "" /wait /B /D "C:\xampp\mysql\bin" "mysql.exe" -uroot < "C:\dev\Visual Studio Code\has-precast-web-app\database\init.sql"

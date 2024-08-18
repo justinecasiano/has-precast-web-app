@@ -1,0 +1,169 @@
+.index-login {
+    padding: 2em;
+    background: none;
+
+    position: relative;
+
+    display: grid;
+    place-items: center;
+}
+
+.wrapper{
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: 80vh;
+
+    box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.log-in-link{
+    background-image: url(../images/log-in/form-background.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    border-radius: 0 20px 20px 0;
+
+    position: relative;
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+}
+
+.log-in-link img {
+    object-fit: contain;
+    height:  60px;
+    width: 200px;
+
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.log-in-link div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.log-in-link h1, .log-in-link p, .log-in-link button{
+    font-family: var(--ff-default);
+    font-style: normal;
+    color: var(--clr-primary);
+    text-align: center;
+}
+
+.log-in-link h1{
+    font-size: clamp(1rem, -0.786rem + 4.762vw, 3.5rem);
+    font-weight: 700;
+    margin-top: 30px;
+    margin-bottom: 25px;
+}
+
+.log-in-link p {
+    font-weight: 400;
+    width: 90%;
+    font-size: clamp(0.5rem, -0.214rem + 1.905vw, 1.5rem);
+    
+    margin-bottom: 40px;
+}
+
+.log-in-link button{
+    padding: 15px 70px;
+    border: solid 1px var(--clr-primary);
+    border-radius: 10000px;
+    color: var(--clr-primary);
+    background-color: transparent;
+    font-size: clamp(0.5rem, -0.214rem + 1.905vw, 1.5rem);
+
+    transition: 0.2s;
+}
+
+.log-in-link a:hover button{
+    color: var(--clr-accent);
+    background-color: var(--clr-primary);
+
+    cursor: pointer;
+}
+
+.registration-form {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 50px;
+}
+
+.registration-form h3, .registration-form p, .registration-form label, .registration-form a{
+    font-family: var(--ff-default);
+    font-style: normal;
+    color: var(--clr-secondary);
+}
+
+.registration-form h3{
+    font-size: clamp(1rem, -0.071rem + 2.857vw, 1.8rem);
+    margin-bottom: 10px;
+}
+
+.registration-form p, .registration-form label {
+    font-size: clamp(0.9rem, -0.071rem + 1.524vw, 0.9rem);
+}
+
+.registration-form p{
+    width: 90%;
+    margin-bottom: 30px;
+}
+
+.name {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+}
+
+
+.registration-form input {
+    margin-bottom: 10px;
+    margin-top: 5px;
+    padding: 8px;
+    width: 100%;
+    font-family: var(--ff-default);
+}
+
+.registration-form>form>a{
+    text-decoration: none;
+    font-size: clamp(0.8rem, -0.071rem + 1.524vw, 0.8rem);
+}
+
+.register-button {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+.register {
+    padding: 15px 70px;
+    font-family: var(--ff-default);
+    font-style: normal;
+    border: solid 1px var(--clr-accent);
+    border-radius: 10000px;
+    background-color: transparent;
+    font-size: clamp(1rem, -0.214rem + 1.905vw, 1.5rem);
+
+    margin-top: 5px;
+    transition: 0.2s;
+
+    color: var(--clr-accent);
+}
+
+.registration-form .register:hover{
+    color: var(--clr-primary);
+    background-color: var(--clr-accent);
+
+    cursor: pointer;
+}
+
+

@@ -1,0 +1,149 @@
+.index-login {
+    padding-inline: 5em;
+    padding-block: 3em;
+    background: none;
+    
+    position: relative;
+
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapper{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    max-width: 1000px;
+    max-height: 5000px;
+    min-height: 550px;
+
+    box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.25);
+
+    border-radius: 20px;
+}
+
+.login-left{
+    background-image: url(../images/log-in/form-background.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    border-radius: 20px 0 0 20px;
+
+    position: relative;
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+}
+
+.login-left img {
+    object-fit: contain;
+    height:  60px;
+    width: 200px;
+
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.login-left div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.login-left h1, .login-left p{
+    font-family: "Inika", serif;
+    font-style: normal;
+    color: var(--clr-primary);
+    text-align: center;
+}
+
+.login-left h1{
+    font-size: clamp(1rem, -0.786rem + 4.762vw, 3.5rem);
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.login-left p {
+    font-weight: 400;
+    width: 75%;
+    font-size: clamp(0.5rem, -0.214rem + 1.905vw, 1.5rem);
+    
+    margin-bottom: 40px;
+}
+
+
+
+
+.login-form {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.login-form h3, .login-form p, .login-form label, .login-form a{
+    font-family: "Inika", serif;
+    font-style: normal;
+    color: var(--clr-secondary);
+}
+
+.login-form h3{
+    font-size: clamp(1rem, -0.071rem + 2.857vw, 1.8rem);
+    margin-bottom: 10px;
+}
+
+.login-form p, .login-form label {
+    font-size: clamp(0.9rem, -0.071rem + 1.524vw, 0.9rem);
+}
+
+.login-form p{
+    width: 90%;
+    margin-bottom: 30px;
+    background-color: var(--clr-primary);
+}
+
+.login-form input {
+    margin-bottom: 10px;
+    margin-top: 5px;
+    padding: 8px;
+    width: 100%;
+}
+
+.login-form>form>a{
+    text-decoration: none;
+    font-size: clamp(0.8rem, -0.071rem + 1.524vw, 0.8rem);
+}
+
+.login-form div{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+.sign_in {
+    padding: 15px 70px;
+    font-family: "Inika", serif;
+    font-style: normal;
+    border: solid 1px var(--clr-accent);
+    border-radius: 10000px;
+    background-color: transparent;
+    font-size: clamp(1rem, -0.214rem + 1.905vw, 1.5rem);
+
+    margin-top: 30px;
+    transition: 0.2s;
+
+    color: var(--clr-accent);
+}
+
+.login-form .sign_in:hover{
+    color: var(--clr-primary);
+    background-color: var(--clr-accent);
+
+    cursor: pointer;
+}
+
+

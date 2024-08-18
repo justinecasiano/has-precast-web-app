@@ -1,0 +1,6 @@
+# The following will redirect all URIs to /index.php
+# that does not match /index.php to /index.php
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ /index.php [QSA,L]
